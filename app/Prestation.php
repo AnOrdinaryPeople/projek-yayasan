@@ -27,7 +27,7 @@ class Prestation extends Model
     }
     public static function getRandom(){
         return DB::table('prestations')
-            ->select('path', 'prestations.created_at as created_at', 'title', 'name')
+            ->select('prestations.id', 'path', 'prestations.created_at as created_at', 'title', 'name')
             ->join('users', 'users.id', '=', 'user_id')
             ->orderBy(DB::raw('RAND()'))
             ->take(3)
