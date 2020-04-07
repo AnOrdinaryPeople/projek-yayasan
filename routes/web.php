@@ -22,7 +22,7 @@ Route::get('/gallery', 'GuestController@gallery');
 Route::get('/schedules/{id}', 'GuestController@getSch');
 Route::get('/articles/{id}', 'GuestController@getArt');
 Route::get('/news/{id}', 'GuestController@getNews');
-Route::get('/prestations/{id}', 'GuestController@getPres');
+// Route::get('/prestations/{id}', 'GuestController@getPres');
 
 // --------------------------------- end guest
 

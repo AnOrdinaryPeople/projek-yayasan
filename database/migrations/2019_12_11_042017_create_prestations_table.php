@@ -21,7 +21,7 @@ class CreatePrestationsTable extends Migration
             $table->string('location');
             $table->string('title_competition');
             $table->string('rank');
-            $table->longText('desc');
+            $table->longText('desc')->nullable();
             $table->string('path');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');

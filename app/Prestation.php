@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class Prestation extends Model
 {
     protected $fillable = [
-        'lang', 'date_competition', 'location', 'rank', 'title_competition', 'title', 'desc', 'path', 'user_id'
+        'lang', 'date_competition', 'location', 'rank', 'title_competition', 'title', 'path', 'user_id'
     ];
 
     public static function getData(){

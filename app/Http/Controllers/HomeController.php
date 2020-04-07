@@ -158,14 +158,11 @@ class HomeController extends Controller
         $req->validate([
             'lang' => 'numeric|min:0|max:1|required',
             'title' => 'string|required',
-            'desc' => 'required|min:12',
             'image' => 'required|max:2048000|mimes:jpeg,jpg,png',
             'date' => 'required|string',
             'location' => 'required|string',
             'rank' => 'required|string',
             'title_competition' => 'required|string'
-        ],[
-            'desc.min' => 'desc is required.'
         ]);
 
         Pres::create([
@@ -175,7 +172,6 @@ class HomeController extends Controller
             'rank' => $req->rank,
             'title_competition' => $req->title_competition,
             'title' => $req->title,
-            'desc' => $req->desc,
             'path' => url('/').'/'.$req->file('image')->store('storage','public_upload'),
             'user_id' => Auth::user()->id,
         ]);

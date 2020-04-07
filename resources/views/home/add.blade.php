@@ -155,6 +155,7 @@
             <img id="img-result" src="{{ asset($data->path) }}" width="150" height="150">
             @endif
         </div>
+        @if($name !== 'Prestasi')
         <div id="tools">
             <span class="ql-formats">
                 <select class="ql-size" title="font size"></select>
@@ -199,6 +200,7 @@
         <div id="editor">
             {!! !empty($data) ? $data->desc : '' !!}
         </div>
+        @endif
         <button class="btn btn-primary mt-4">{{!empty($data) ? 'Update' : 'Tambah'}}</button>
     </form>
 </div>

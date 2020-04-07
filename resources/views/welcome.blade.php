@@ -368,7 +368,7 @@
                     var date = new Date(p[i].date_competition)
 
                     $('#bpi-prestation-js').append(`
-                        <a href="${url+'prestations/'+p[i].id}" class="col-12 col-md-6 col-lg-4 respon-card">
+                        <div class="col-12 col-md-6 col-lg-4 respon-card">
                             <div class="single-thumb-juara">
                                 <div class="card-img-thumb">
                                     <img src="${p[i].path}" alt="Card image cap" style="height: 310px">
@@ -376,7 +376,7 @@
                                 <div class="card-body text-center">
                                     <h5 class="card-text">${p[i].title}</h5>
                                     <div class="row justify-content-md-center ket-prestasi">
-                                        <p class="col-md-4 tgl">${date.toLocaleString('id-ID', {dateStyle: 'full'})}</p>
+                                        <p class="col-md-4 tgl">${date.getFullYear()}</p>
                                         <p class="col-md-4 tmpt">${p[i].location}</p>
                                         <p class="col-md-4 event">${p[i].title_competition}</p>
                                     </div>
@@ -399,7 +399,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>`)
+                        </div>`)
                 }
             })
             .catch(err => console.error(err))
