@@ -64,7 +64,7 @@ Route::prefix('home')->group(function(){
 
     Route::group(['prefix' => 'delete'], function(){
         Route::delete('/agenda/{id}', 'HomeController@newsDel');
-        Route::delete('/aritkel/{id}', 'HomeController@newsDel');
+        Route::delete('/artikel/{id}', 'HomeController@newsDel');
         Route::delete('/berita/{id}', 'HomeController@newsDel');
         Route::delete('/prestasi/{id}', 'HomeController@presDel');
         Route::delete('/galeri/{id}', 'HomeController@galDel');
